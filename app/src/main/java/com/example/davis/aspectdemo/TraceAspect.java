@@ -23,7 +23,7 @@ public class TraceAspect {
     private static final String POINTCUT_CONSTRUCTOR =
             "execution(@com.example.davis.aspectdemo.DebugTrace *.new(..))";
 
-    @Pointcut("execution(@com.example.davis.aspectdemo.DebugTrace * *(..))")
+    @Pointcut(POINTCUT_METHOD)
     public void methodAnnotatedWithDebugTrace() {}
 
     @Pointcut(POINTCUT_CONSTRUCTOR)
@@ -70,28 +70,7 @@ public class TraceAspect {
         Log.e(className,"value="+value);
         Log.e(className,"type="+type);
 
-//        Log.d(value, buildLogMessage(methodName, stopWatch.getTotalTimeMillis()));
-
         return result;
     }
 
-    /**
-     * Create a log message.
-     *
-     * @param methodName A string with the method name.
-     * @param methodDuration Duration of the method in milliseconds.
-     * @return A string representing message.
-     */
-    private static String buildLogMessage(String methodName, long methodDuration) {
-        StringBuilder message = new StringBuilder();
-        message.append("Gintonic --> ");
-        message.append(methodName);
-        message.append(" --> ");
-        message.append("[");
-        message.append(methodDuration);
-        message.append("ms");
-        message.append("]");
-
-        return message.toString();
-    }
 }

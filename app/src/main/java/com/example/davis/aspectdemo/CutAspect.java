@@ -37,17 +37,8 @@ public class CutAspect {
 
         Object o=joinPoint.proceed();
 
+
         Log.e("cut","Around");
         return o;
-    }
-
-
-    @Before("cutMethod()")
-    public void beforeCut(){
-        Log.e("cut","Before");
-    }
-    @After("cutMethod()")
-    public void afterCut() throws Throwable {
-        Log.e("cut","After");
     }
 }

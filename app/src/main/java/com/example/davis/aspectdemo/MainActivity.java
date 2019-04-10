@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    //执行时间性能统计
 
     public void doFunc1(View view) {
 
@@ -42,20 +43,10 @@ public class MainActivity extends AppCompatActivity {
         Log.e("doFunc2",timeTool.getTotalTimeMillis()+"");
 
     }
-
+    @AopPoint("func3")
     public void doFunc3(View view) {
-        TimeTool timeTool=new TimeTool();
-        timeTool.start();
-//        SystemClock.sleep(1000);
-        func();
-        timeTool.stop();
-        Log.e("doFunc3",timeTool.getTotalTimeMillis()+"");
-
-    }
-
-    @Cut
-    public void func() {
         SystemClock.sleep(1000);
     }
+
 
 }
