@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
@@ -23,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     //执行时间性能统计
 
     public void doFunc1(View view) {
@@ -43,9 +50,22 @@ public class MainActivity extends AppCompatActivity {
         Log.e("doFunc2",timeTool.getTotalTimeMillis()+"");
 
     }
-    @AopPoint("func3")
+
     public void doFunc3(View view) {
-        SystemClock.sleep(1000);
+        try {
+            AppItem appItem=null;
+            appItem.number=2;
+            SystemClock.sleep(1000);
+        }catch (Exception e){
+
+        }
+
+        AA();
+        Toast.makeText(this,"af",Toast.LENGTH_LONG).show();
+    }
+
+    public  void AA(){
+        Log.e("doFuncaaa2","aaaaaa");
     }
 
 
