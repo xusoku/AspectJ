@@ -13,15 +13,26 @@ public class Main2Activity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
 
-    public void doFunc1(View view) {
 
+
+    public void doFunc1(View view) {
+        try {
             AppItem appItem=null;
             appItem.number=2;
-            SystemClock.sleep(1000);
+        }catch (Exception e){}
+
     }
 
 

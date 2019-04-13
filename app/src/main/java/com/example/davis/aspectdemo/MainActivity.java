@@ -20,14 +20,11 @@ public class MainActivity extends BaseActivity {
     @AopPoint(value = "首页点击",type = 1)
     public void doFunc1(View view) {
         SystemClock.sleep(1000);
-
     }
-
 
     @AopPoint("分类点击")
     public void doFunc2(View view) {
         SystemClock.sleep(1000);
-
     }
 
     public void doFunc3(View view) {

@@ -26,8 +26,8 @@ public class AopAspect {
         MethodSignature signature= (MethodSignature) joinPoint.getSignature();
         AopPoint aopPoint=signature.getMethod().getAnnotation(AopPoint.class);
 
-        String type=aopPoint.value();
-
+        String value=aopPoint.value();
+        int type=aopPoint.type();
 
         TimeTool timeTool=new TimeTool();
         timeTool.start();
@@ -35,7 +35,7 @@ public class AopAspect {
         Object result=joinPoint.proceed();
 
         timeTool.stop();
-        Log.e("aopCut",timeTool.getTotalTimeMillis()+"==="+type);
+        Log.e("aopCut",value+" 执行时间="+timeTool.getTotalTimeMillis() +" type类型是"+type);
 
         return result;
     }
