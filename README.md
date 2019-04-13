@@ -195,7 +195,6 @@ AspectJ的joinpoint有如下：
         return result;
     }
     }
-
 结果
 ![png](https://github.com/xusoku/AspectJ/blob/master/result.jpg)
 
