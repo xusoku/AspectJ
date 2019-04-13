@@ -147,16 +147,16 @@ AspectJ的joinpoint有如下：
  ### 有注解
 
 声明一个注解 AopPoint
-
+```Java
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
     public @interface AopPoint {
         String value();
         int type() default 0;
     }
-
+```
 在Activity 中，定义了2个按钮的点击事件，在方法上都标记注解，指定了value 和type。
-
+```Java
     @AopPoint(value = "首页点击",type = 1)
     public void doFunc1(View view) {
         SystemClock.sleep(1000);
@@ -166,9 +166,9 @@ AspectJ的joinpoint有如下：
     public void doFunc2(View view) {
         SystemClock.sleep(1000);
     }
-
+```
 编写一个切面类
-
+```Java
     @Aspect
     public class AopAspect {
     @Pointcut("execution(@com.example.davis.aspectdemo.AopPoint * *(..))")
@@ -195,15 +195,13 @@ AspectJ的joinpoint有如下：
         return result;
     }
     }
-结果
-![png](https://github.com/xusoku/AspectJ/blob/master/result.jpg)
-
+```
 
 
 ### 无注解
 
 1、这个是扫描Activity 中onCreate方法的调用
-
+```Java
     @Aspect
     public class FuncTAspect {
 
@@ -214,7 +212,7 @@ AspectJ的joinpoint有如下：
         Log.e("FuncTAspect", "onActivityMethodBefore: " + key+"\n"+joinPoint.getThis());
     }
     }
-
+```
 如果把onCreate改成通配符* 
 android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
 
@@ -222,7 +220,7 @@ android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
 ![png](https://github.com/xusoku/AspectJ/blob/master/saomiao.png)
 
 2、捕获catch异常 
-
+```Java
     @Aspect
     public class ExceptionHandleAspect {
 
@@ -248,9 +246,9 @@ android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
         Log.e(TAG, joinPoint.getSignature().toLongString() + " handleBefore() :" + e.toString())；
     }
     }
-
+```
 在方法里制造一个Null指针
-
+```Java
     public void doFunc1(View view) {
         try {
             AppItem appItem=null;
@@ -258,7 +256,7 @@ android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
         }catch (Exception e){}
 
     }
-
+```
 
  结果
   ![png](https://github.com/xusoku/AspectJ/blob/master/exception.jpg)
