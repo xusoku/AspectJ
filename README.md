@@ -196,7 +196,8 @@ AspectJ的joinpoint有如下：
     }
     }
 
-结果 图片
+结果
+https://github.com/xusoku/AspectJ/blob/master/result.jpg
 
 
 
@@ -215,11 +216,11 @@ AspectJ的joinpoint有如下：
     }
     }
 
-结果 图
-
 如果把onCreate改成通配符* 
-android.app.Activity.onCreate(..) 改成android.app.Activity.*(..) 
-结果 图
+android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
+
+结果
+https://github.com/xusoku/AspectJ/blob/master/saomiao.png
 
 2、捕获catch异常 
 
@@ -259,7 +260,9 @@ android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
 
     }
 
- 结果 图
+
+ 结果
+ https://github.com/xusoku/AspectJ/blob/master/exception.jpg
 
  
 
