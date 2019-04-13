@@ -197,7 +197,7 @@ AspectJ的joinpoint有如下：
     }
 
 结果
-https://github.com/xusoku/AspectJ/blob/master/result.jpg
+![png](https://github.com/xusoku/AspectJ/blob/master/result.jpg)
 
 
 
@@ -220,7 +220,7 @@ https://github.com/xusoku/AspectJ/blob/master/result.jpg
 android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
 
 结果
-https://github.com/xusoku/AspectJ/blob/master/saomiao.png
+![png](https://github.com/xusoku/AspectJ/blob/master/saomiao.png)
 
 2、捕获catch异常 
 
@@ -262,7 +262,7 @@ https://github.com/xusoku/AspectJ/blob/master/saomiao.png
 
 
  结果
- https://github.com/xusoku/AspectJ/blob/master/exception.jpg
+  ![png](https://github.com/xusoku/AspectJ/blob/master/exception.jpg)
 
  
 
