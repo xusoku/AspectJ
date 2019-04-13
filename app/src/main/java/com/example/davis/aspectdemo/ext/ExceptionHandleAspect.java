@@ -1,4 +1,4 @@
-package com.example.davis.aspectdemo;
+package com.example.davis.aspectdemo.ext;
 
 import android.util.Log;
 
@@ -33,6 +33,6 @@ public class ExceptionHandleAspect {
     @Before(value = "handle(e)", argNames = "e")
     public void handleBefore(JoinPoint joinPoint, Exception e) {
         Log.e(TAG, joinPoint.getSignature().toLongString() + " handleBefore() :" + e.toString());
-//汇总处理
+        //汇总处理
     }
 }

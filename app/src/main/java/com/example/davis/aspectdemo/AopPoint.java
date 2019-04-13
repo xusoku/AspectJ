@@ -6,11 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by davis on 2019/4/10.
+ * Created by xushengfu on 2019/4/11.
  */
-
-@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface AopPoint  {
+@Target(ElementType.METHOD)
+public @interface AopPoint {
     String value();
+    int type() default 0;
 }
