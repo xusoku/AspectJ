@@ -1,4 +1,4 @@
-## AspectJ
+## AspectJ  
 
 AspectJ是一个面向切面的框架，它扩展了Java语言。AspectJ定义了AOP语法，它有一个专门的编译器用来生成遵守Java字节编码规范的Class文件.利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
 
@@ -215,6 +215,8 @@ AspectJ的joinpoint有如下：
     }
     }
 ```
+结果只能扫描到onCreate方法
+
 如果把onCreate改成通配符* 
 android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
 
