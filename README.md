@@ -263,7 +263,7 @@ android.app.Activity.onCreate(..) 改成android.app.Activity.*(..)
 ```
 
 结果
-  ![png](https://github.com/xusoku/AspectJ/blob/master/exception.jpg)
+  ![png](https://github.com/xusoku/AspectJ/blob/master/exception.png)
 
 
 ## 代码 
